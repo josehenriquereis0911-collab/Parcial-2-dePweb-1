@@ -1,0 +1,37 @@
+Integrantes:
+LUIS FELIPE LEAL SOARES
+OMENRARIO HENDERSON LIMA COSTA
+BIANCA FOLHA MAIA
+JOSE HENRIQUE DOS SANTOS REIS
+GABRIEL LEVI DA SILVA
+
+1. ARMAZENAMENTO (COOKIES HTTP)
+- Banner de Consentimento: Implementação visual de um banner de aviso para que o usuário confirme a aceitação ou recusa dos cookies.
+- Persistência do Aceite: Ajuste na lógica para salvar o consentimento do usuário, impedindo que o banner seja exibido repetidamente a cada navegação ou atualização de página.
+- Contador de Acessos: Adicionado um contador que incrementa o número de visitas na página a cada novo acesso.
+- Nome do Visitante (Ouvidoria): Armazenamento do nome do usuário na página de Ouvidoria, permitindo o preenchimento automático do campo caso o usuário saia da página e retorne posteriormente.
+- Tema Preferido: Adicionada a verificação e o registro da preferência de tema do usuário.
+- Registro de Última Visita: Implementado o armazenamento da data e do horário exato do último acesso realizado pelo usuário.
+
+2. ARMAZENAMENTO (LOCALSTORAGE)
+- Tema Preferido (`temaPreferido`): Inicialização e salvamento da preferência visual padrão ("claro") no navegador.
+- Contador de Acessos na Home (`totalAcessosHome`): Implementação de um contador que incrementa automaticamente a contagem de visitas apenas quando o usuário está na página inicial.
+- Último Vereador Visualizado (`ultimoVereadorVisualizado`): Captura dinâmica do evento de clique nos cards de vereadores para registrar o nome do último perfil acessado.
+- Nome do Último Visitante (`nomeUltimoVisitante`): Armazenamento e preenchimento automático do campo de nome na página de Ouvidoria conforme o usuário digita.
+- Notícias Favoritas (`noticiasFavoritas`): Criação e gerenciamento de um array estruturado em formato JSON para armazenar notícias marcadas como favoritas.
+
+3. ARMAZENAMENTO (SESSIONSTORAGE)
+- Arquivo Dedicado (`sessionStorage_bf.js`): Criação de script isolado com tratamento de erros via try/catch, funções auxiliares e serialização em JSON[cite: 15].
+- Início da Sessão (`sessaoInicio`): Registo automático da data e hora em que a sessão de navegação começou[cite: 15].
+- Páginas Visitadas (`paginasVisitadas`): Registo em array JSON do histórico contendo o nome e o horário de todas as páginas abertas durante a sessão (máximo de 50 entradas)[cite: 15].
+- Rascunho da Ouvidoria (`rascunhoOuvidoria`): Salvamento dinâmico dos dados digitados (tipo, assunto e mensagem) no formulário da Ouvidoria, com limpeza automática após o envio[cite: 15].
+- Último Protocolo Consultado (`ultimoProtocoloConsultado`): Armazenamento e preenchimento automático da última consulta de protocolo realizada pelo cidadão[cite: 15].
+- Slide Atual (`slideAtual`): Persistência do estado ativo do carrossel/slider de notícias da página inicial durante a sessão[cite: 15].
+- Vereadores Vistos na Sessão (`vereadoresVistosSessao`): Armazenamento em array dos nomes únicos dos vereadores cujos perfis foram abertos pelo usuário[cite: 15].
+- Integração Global: Inclusão do script no elemento head de todas as páginas HTML para rastreamento contínuo da navegação[cite: 16].
+
+4. DINAMICIDADE E MANIPULAÇÃO DO DOM
+- Slider de Notícias: Substituição do bloco de apenas uma notícia estática por um carrossel dinâmico contendo 4 notícias.
+- Automação e Controles Visuais: Configuração da transição automática de slides por intervalo de tempo, acompanhada de botões circulares interativos para a alternância manual.
+- Estrutura de Conteúdo: Cada notícia do slider foi estruturada com título, texto descritivo e imagem dedicada. Um botão abaixo do slider também foi adicionado.
+- Organização de Arquivos: Criação do arquivo slider.js para gerenciar a lógica de transição automática e o estado ativo dos botões manuais, e inclusão da pasta source para as imagens das notícias.
