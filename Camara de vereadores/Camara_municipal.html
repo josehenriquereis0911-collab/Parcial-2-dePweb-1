@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câmara Municipal</title>
+    <link rel="stylesheet" href="camara.css">
+    <script src="localStorage.js" defer></script>
+    <script src="cookies.js"></script>
+    <script src="sessionStorage.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Câmara Municipal</h1>
+            <p>Cidade fictícia</p>
+        </div>
+        <nav>
+            <a href="Camara_municipal.html">Início</a>
+            <a href="editais.html">Editais</a>
+            <a href="regimento-interno.html">Regimento Interno</a>
+            <a href="publicacoes.html">Publicações</a>
+            <a href="comissoes.html">Comissões</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="ouvidoria.html">Ouvidoria</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="noticias">
+            <h2>Principais Notícias</h2>
+            <!-- <div class="noticia-principal">
+                <h3>Câmara Municipal realiza sessão ordinária</h3>
+                <p>Acompanhe as principais informações sobre as atividades da Câmara Municipal.</p>
+                <a href="#">Leia mais</a>
+            </div> -->
+            <div class="slider">
+                <div class="slides">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <div class="slide first">
+                        
+                        <img src="source/centro-historico.webp" alt="">
+                        <div class="texto">
+                            <h2>Aprovado recurso para revitalização do Centro Histórico</h2>
+                            <p>Projeto de Lei garante recapeamento e iluminação de LED nas vias centrais. Obras iniciam mês que vem para maior segurança.</p>
+                        </div>
+                        
+                    </div>
+                    <div class="slide">
+                        
+                        <img src="source/vacinacao.jpg" alt="">
+                        <div class="texto">
+                            <h2>Apoio à vacinação nos bairros</h2>
+                            <p>Comissão aprova parceria para levar unidades móveis e gratuitas aos bairros, ampliando a cobertura vacinal para todos.</p>
+                        </div>                        
+                        
+                    </div>
+                    <div class="slide">
+                        
+                        <img src="source/wifi-rede-publica.webp" alt="">
+                        <div class="texto">
+                            <h2>Mais Wi-Fi nas escolas públicas</h2>
+                            <p>Avança o debate sobre a instalação de novos pontos de internet na rede municipal, apoiando a inclusão digital dos alunos.</p>
+                        </div>                        
+                        
+                    </div>
+                    <div class="slide">
+                        <img src="source/cidade_limpa.jpg" alt="">
+                        <div class="texto">
+                            <h2>Projeto 'Cidade Limpa' avança</h2>
+                            <p>Proposta que cria ecopontos e incentiva a coleta seletiva pela cidade passa em primeira votação. Fase final será na terça.</p>
+                        </div>                        
+                        
+                    </div>
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+                </div>
+                <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                </div>
+            </div>
+            <button>Ver todas as Notícias</button>
+        </section>
+
+        <section class="acesso-rapido">
+            <h2>Acesso Rápido</h2>
+            <div class="acesso-cards">
+                <a href="editais.html" class="acesso-card">
+                    <h3>Editais</h3>
+                    <p>Consulte os editais da Câmara.</p>
+                </a>
+                <a href="regimento-interno.html" class="acesso-card">
+                    <h3>Regimento Interno</h3>
+                    <p>Consulte o regimento da Câmara.</p>
+                </a>
+                <a href="publicacoes.html" class="acesso-card">
+                    <h3>Publicações</h3>
+                    <p>Acesse as publicações oficiais.</p>
+                </a>
+                <a href="eventos.html" class="acesso-card">
+                    <h3>Eventos</h3>
+                    <p>Veja o cronograma de Eventos.</p>
+                </a>
+                <a href="comissoes.html" class="acesso-card">
+                    <h3>Comissões</h3>
+                    <p>Conheça as comissões legislativas.</p>
+                </a>
+                <a href="ouvidoria.html" class="acesso-card">
+                    <h3>Ouvidoria</h3>
+                    <p>Entre em contato com a Ouvidoria.</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="vereadores">
+            <h2>Conheça os Vereadores</h2>
+            <div class="vereadores-container">
+
+                <article class="vereador-card">
+                    <div class="foto-vereador">Foto</div>
+                    <h3>Maria Silva</h3>
+                    <p>Partido: ABC</p>
+                    <p>Vereadora</p>
+                    <a href="#perfil">Ver perfil</a>
+                </article>
+
+                <article class="vereador-card">
+                    <div class="foto-vereador">Foto</div>
+                    <h3>João Santos</h3>
+                    <p>Partido: XYZ</p>
+                    <p>Vereador</p>
+                    <a href="#joao">Ver perfil</a>
+                </article>
+
+                <article class="vereador-card">
+                    <div class="foto-vereador">Foto</div>
+                    <h3>Ana Oliveira</h3>
+                    <p>Partido: DEF</p>
+                    <p>Vereadora</p>
+                    <a href="#ana">Ver perfil</a>
+                </article>
+
+                <article class="vereador-card">
+                    <div class="foto-vereador">Foto</div>
+                    <h3>Pedro Costa</h3>
+                    <p>Partido: GHI</p>
+                    <p>Vereador</p>
+                    <a href="#pedro">Ver perfil</a>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="perfil-vereador" id="maria">
+            <h2>Perfil da Vereadora</h2>
+
+            <div class="perfil-conteudo">
+                <div class="perfil-foto">Foto</div>
+
+                <div class="perfil-informacoes">
+                    <h3>Maria Silva</h3>
+                    <p><strong>Partido:</strong> ABC</p>
+                    <p><strong>Data de nascimento:</strong> 00/00/0000</p>
+                    <p><strong>Naturalidade:</strong> Nome da Cidade</p>
+                    <p><strong>Escolaridade:</strong> Ensino Superior</p>
+                    <p><strong>Contato:</strong> (00) 00000-0000</p>
+
+                    <h4>Sobre a vereadora</h4>
+                    <p>
+                        Maria Silva atua na Câmara Municipal, participando
+                        das atividades legislativas e das comissões da Câmara.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="perfil-vereador" id="joao">
+            <h2>Perfil do Vereador</h2>
+
+            <div class="perfil-conteudo">
+                <div class="perfil-foto">Foto</div>
+
+                <div class="perfil-informacoes">
+                    <h3>João Santos</h3>
+                    <p><strong>Partido:</strong> XYZ</p>
+                    <p><strong>Data de nascimento:</strong> 00/00/0000</p>
+                    <p><strong>Naturalidade:</strong> Nome da Cidade</p>
+                    <p><strong>Escolaridade:</strong> Ensino Superior</p>
+                    <p><strong>Contato:</strong> (00) 00000-0000</p>
+
+                    <h4>Sobre o vereador</h4>
+                    <p>
+                        João Santos atua na Câmara Municipal, participando
+                        das atividades legislativas e das comissões da Câmara.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="perfil-vereador" id="ana">
+            <h2>Perfil da Vereadora</h2>
+
+            <div class="perfil-conteudo">
+                <div class="perfil-foto">Foto</div>
+
+                <div class="perfil-informacoes">
+                    <h3>Ana Oliveira</h3>
+                    <p><strong>Partido:</strong> DEF</p>
+                    <p><strong>Data de nascimento:</strong> 00/00/0000</p>
+                    <p><strong>Naturalidade:</strong> Nome da Cidade</p>
+                    <p><strong>Escolaridade:</strong> Ensino Superior</p>
+                    <p><strong>Contato:</strong> (00) 00000-0000</p>
+
+                    <h4>Sobre a vereadora</h4>
+                    <p>
+                        Ana Oliveira atua na Câmara Municipal, participando
+                        das atividades legislativas e das comissões da Câmara.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="perfil-vereador" id="pedro">
+            <h2>Perfil do Vereador</h2>
+
+            <div class="perfil-conteudo">
+                <div class="perfil-foto">Foto</div>
+
+                <div class="perfil-informacoes">
+                    <h3>Pedro Costa</h3>
+                    <p><strong>Partido:</strong> GHI</p>
+                    <p><strong>Data de nascimento:</strong> 00/00/0000</p>
+                    <p><strong>Naturalidade:</strong> Nome da Cidade</p>
+                    <p><strong>Escolaridade:</strong> Ensino Superior</p>
+                    <p><strong>Contato:</strong> (00) 00000-0000</p>
+
+                    <h4>Sobre o vereador</h4>
+                    <p>
+                        Pedro Costa atua na Câmara Municipal, participando
+                        das atividades legislativas e das comissões da Câmara.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="slider.js"></script>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const banner = document.getElementById("banner-cookies");
+        const btnAceitar = document.getElementById("btn-aceitar-cookies");
+
+        // vejo se a pessoas ja aceitou o cookie
+        if (!document.cookie.includes("cookieAceite=Sim")) {
+            banner.style.display = "flex";
+        }
+
+        // Quando o usuário clica, salvando o cookie  com validade e path
+        btnAceitar.addEventListener("click", () => {
+            // Adicionado path=/ e tempo deexpiração para o navegador não apagar no refresh
+            document.cookie = "cookieAceite=Sim; max-age=" + (60*60*24*30) + "; path=/";
+            banner.style.display = "none";
+        });
+    });
+</script>
+
+</body>
+
+</html>

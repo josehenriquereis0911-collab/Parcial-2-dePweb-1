@@ -1,0 +1,748 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 100px;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #0D1321;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: white;
+}
+
+.logo p {
+    font-size: 14px;
+    color: #EEEADA;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    color: #718BAA;
+}
+
+/* MAIN */
+main {
+    min-height: 80vh;
+}
+
+/* SEÇÃO NOTÍCIAS */
+.noticias {
+    padding: 60px 50px;
+    background-color: #EEEADA;
+}
+
+.noticias h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #0D1321;
+}
+
+.noticia-principal {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.noticia-principal h3 {
+    font-size: 28px;
+    color: #1D304A;
+    margin-bottom: 15px;
+}
+
+.noticia-principal p {
+    font-size: 16px;
+    color: #222222;
+    margin-bottom: 20px;
+}
+
+.noticia-principal a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1D304A;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.noticia-principal a:hover {
+    background-color: #2B4D68;
+}
+
+/*SEÇÃO SLIDER */
+.slider{
+    margin: 0 auto;
+    width: 600px;
+    /* height: 400px; */
+    overflow: hidden;
+    border-radius: 30px 0px 30px 0;
+}
+.slides{
+    width: 400%;
+    /* height: 400px; */
+    display: flex;
+    
+}
+.slides input{
+    display: none;
+}
+.slide{
+    width: 25%;
+    position: relative;
+    transition: 1s ease;
+    cursor: pointer;
+}
+.slide img{
+    /* width: 400px; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Preenche a div sem achatar a imagem */
+    transition: transform 0.3s ease; /* Cria a animação suave */
+}
+.slide img:hover{
+    transform: scale(1.2);
+}
+.slide img:hover ~ .texto{
+    transition: 1s;
+    background-color: #053172;
+}
+.slide .texto:hover{
+    transition: 1s;
+    background-color: #053172;
+}
+/*não funcionando*/
+/* .slide .texto:hover ~ img{
+    transform: scale(1.2);
+} */
+.slide .texto{
+    background-color: #000000;
+    opacity: 50%;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    padding: 20px;
+    cursor: pointer;
+    width: 100%;
+    height: 25%;
+    overflow: hidden;
+}
+.texto h2{
+    text-align:left;
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 1.1rem;
+    
+}
+.texto p{
+    font-size: 0.8rem;
+}
+.navigation-manual{
+    position: absolute;
+    width: 600px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn{
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s ease;
+}
+.manual-btn:not(:last-child){
+    margin-right: 15px;
+}
+.manual-btn:hover{
+    background-color: #fff;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+.noticias button{
+    background-color: #053172;
+    color: #fff;
+    display: block;
+    margin: 15px auto 0 auto;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    
+    transition: background-color 0.3s ease, transform 0.1s;
+}
+.noticias button:hover{
+    background-color: #0d5bcf;
+}
+.noticias button:active {
+  transform: translateY(1px); /* Dá a sensação física de botão pressionado */
+}
+
+
+/* SEÇÃO ACESSO RÁPIDO */
+.acesso-rapido {
+    padding: 60px 50px;
+    text-align: center;
+}
+
+.acesso-rapido h2 {
+    color: #0D1321;
+    margin-bottom: 30px;
+}
+
+.acesso-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.acesso-card {
+    width: 100%;
+    max-width: 350px;
+    padding: 25px;
+    background-color: #1D304A;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.acesso-card:hover {
+    background-color: #2B4D68;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.acesso-card h3 {
+    margin-bottom: 10px;
+}
+
+.acesso-card p {
+    font-size: 14px;
+}
+
+/* SEÇÃO VEREADORES */
+.vereadores {
+    padding: 60px 50px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.vereadores h2 {
+    color: #0D1321;
+    margin-bottom: 30px;
+}
+
+.vereadores-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.vereador-card {
+    width: 250px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 0 auto;
+}
+
+.vereador-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.foto-vereador {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background-color: #718BAA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.vereador-card h3 {
+    color: #1D304A;
+    margin-bottom: 10px;
+}
+
+.vereador-card p {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.vereador-card a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #1D304A;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.vereador-card a:hover {
+    background-color: #2B4D68;
+}
+
+/* SEÇÃO PERFIL DO VEREADOR */
+.perfil-vereador {
+    padding: 60px 50px;
+    background-color: #EEEADA;
+}
+
+.perfil-vereador h2 {
+    text-align: center;
+    color: #0D1321;
+    margin-bottom: 30px;
+}
+
+.perfil-conteudo {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.perfil-foto {
+    width: 180px;
+    height: 180px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: #718BAA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.perfil-informacoes {
+    text-align: left;
+}
+
+.perfil-informacoes h3 {
+    color: #1D304A;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.perfil-informacoes p {
+    margin-bottom: 10px;
+    color: #222222;
+}
+
+.perfil-informacoes h4 {
+    color: #1D304A;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* PÁGINAS INTERNAS */
+.pagina-interna {
+    padding: 60px 50px;
+    background-color: #EEEADA;
+    min-height: 600px;
+}
+
+.pagina-interna h2 {
+    text-align: center;
+    color: #0D1321;
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
+.descricao-pagina {
+    text-align: center;
+    color: #222222;
+    margin-bottom: 40px;
+    font-size: 16px;
+}
+
+/* TABELAS */
+.tabela-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+.tabela-eventos {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabela-eventos thead {
+    background-color: #1D304A;
+    color: white;
+}
+
+.tabela-eventos th {
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.tabela-eventos td {
+    padding: 15px;
+    border-bottom: 1px solid #dddddd;
+    color: #222222;
+}
+
+.tabela-eventos tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.tabela-eventos a {
+    color: #1D304A;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tabela-eventos a:hover {
+    color: #2B4D68;
+}
+
+/* COMISSÕES */
+.comissoes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.comissao-card {
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.comissao-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.comissao-card h3 {
+    color: #1D304A;
+    margin-bottom: 15px;
+}
+
+.comissao-card p {
+    color: #222222;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* TEXTO BOX - REGIMENTO */
+.texto-box {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.texto-box h3 {
+    color: #1D304A;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.texto-box h3:first-child {
+    margin-top: 0;
+}
+
+.texto-box p {
+    color: #222222;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.texto-box ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.texto-box li {
+    color: #222222;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.botao-pagina {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #1D304A;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.botao-pagina:hover {
+    background-color: #2B4D68;
+}
+
+/* OUVIDORIA */
+.ouvidoria {
+    padding: 60px 50px;
+    background-color: #EEEADA;
+    min-height: 600px;
+}
+
+.ouvidoria h2 {
+    text-align: center;
+    color: #0D1321;
+    margin-bottom: 15px;
+}
+
+.descricao-ouvidoria {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+    color: #222222;
+    line-height: 1.6;
+}
+
+.ouvidoria-conteudo {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* FORMULÁRIO */
+.manifestacao {
+    flex: 2;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.manifestacao h3 {
+    color: #1D304A;
+    margin-bottom: 25px;
+}
+
+.manifestacao form {
+    display: flex;
+    flex-direction: column;
+}
+
+.manifestacao label {
+    margin-bottom: 6px;
+    color: #0D1321;
+    font-weight: bold;
+}
+
+.manifestacao input,
+.manifestacao select,
+.manifestacao textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.manifestacao textarea {
+    resize: vertical;
+}
+
+.manifestacao button {
+    padding: 12px 20px;
+    background-color: #1D304A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.manifestacao button:hover {
+    background-color: #2B4D68;
+}
+
+/* CANAIS DE ATENDIMENTO */
+.canais-atendimento {
+    flex: 1;
+}
+
+.canais-atendimento h3 {
+    color: #1D304A;
+    margin-bottom: 20px;
+}
+
+.atendimento-card {
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.atendimento-card h4 {
+    color: #1D304A;
+    margin-bottom: 8px;
+}
+
+.atendimento-card p {
+    color: #222222;
+    margin-bottom: 5px;
+}
+
+/* CONSULTA DE PROTOCOLO */
+.consulta-protocolo {
+    max-width: 1000px;
+    margin: 40px auto 0;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.consulta-protocolo h3 {
+    color: #1D304A;
+    margin-bottom: 10px;
+}
+
+.consulta-protocolo p {
+    margin-bottom: 20px;
+    color: #222222;
+}
+
+.consulta-protocolo form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.consulta-protocolo label {
+    display: none;
+}
+
+.consulta-protocolo input {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.consulta-protocolo button {
+    padding: 12px 25px;
+    background-color: #1D304A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.consulta-protocolo button:hover {
+    background-color: #2B4D68;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .vereadores-container,
+    .comissoes-container {
+        grid-template-columns: 1fr;
+    }
+
+    .perfil-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .perfil-informacoes {
+        text-align: left;
+    }
+
+    .ouvidoria-conteudo {
+        flex-direction: column;
+    }
+
+    .manifestacao,
+    .canais-atendimento {
+        flex: 1 !important;
+    }
+
+    .consulta-protocolo form {
+        flex-direction: column;
+    }
+
+    .consulta-protocolo input {
+        min-width: auto;
+    }
+}

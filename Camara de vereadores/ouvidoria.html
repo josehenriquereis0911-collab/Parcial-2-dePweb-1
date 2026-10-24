@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ouvidoria - Câmara Municipal</title>
+    <link rel="stylesheet" href="camara.css">
+    <script src="cookies_ome.js">//fique esperto p tirar isso.</script>
+    <script src="sessionStorage_bf.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Câmara Municipal</h1>
+            <p>Cidade fictícia</p>
+        </div>
+        <nav>
+            <a href="Camara_municipal.html">Início</a>
+            <a href="editais.html">Editais</a>
+            <a href="regimento-interno.html">Regimento Interno</a>
+            <a href="publicacoes.html">Publicações</a>
+            <a href="comissoes.html">Comissões</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="ouvidoria.html">Ouvidoria</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="ouvidoria">
+            <h2>Ouvidoria</h2>
+
+            <p class="descricao-ouvidoria">
+                A Ouvidoria é um canal de comunicação entre os cidadãos
+                e a Câmara Municipal. Por meio deste espaço, você pode
+                enviar sugestões, reclamações, elogios, denúncias e solicitações.
+            </p>
+
+            <div class="ouvidoria-conteudo">
+
+                <div class="manifestacao">
+                    <h3>Envie sua Manifestação</h3>
+
+                    <form>
+                        <label for="tipo">Tipo de manifestação</label>
+                        <select id="tipo" name="tipo" required>
+                            <option value="">Selecione</option>
+                            <option value="reclamacao">Reclamação</option>
+                            <option value="sugestao">Sugestão</option>
+                            <option value="elogio">Elogio</option>
+                            <option value="denuncia">Denúncia</option>
+                            <option value="solicitacao">Solicitação</option>
+                        </select>
+
+                        <label for="nome">Nome</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite seu nome"
+                            required
+                        >
+
+                        <label for="email">E-mail</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Digite seu e-mail"
+                            required
+                        >
+
+                        <label for="telefone">Telefone</label>
+                        <input
+                            type="tel"
+                            id="telefone"
+                            name="telefone"
+                            placeholder="(00) 00000-0000"
+                        >
+
+                        <label for="assunto">Assunto</label>
+                        <input
+                            type="text"
+                            id="assunto"
+                            name="assunto"
+                            placeholder="Informe o assunto"
+                            required
+                        >
+
+                        <label for="mensagem">Mensagem</label>
+                        <textarea
+                            id="mensagem"
+                            name="mensagem"
+                            rows="6"
+                            placeholder="Digite sua manifestação"
+                            required
+                        ></textarea>
+
+                        <button type="submit">Enviar Manifestação</button>
+                    </form>
+                </div>
+
+                <div class="canais-atendimento">
+                    <h3>Canais de Atendimento</h3>
+
+                    <div class="atendimento-card">
+                        <h4>Telefone</h4>
+                        <p>(00) 0000-0000</p>
+                    </div>
+
+                    <div class="atendimento-card">
+                        <h4>E-mail</h4>
+                        <p>ouvidoria@camara.com</p>
+                    </div>
+
+                    <div class="atendimento-card">
+                        <h4>Horário de Atendimento</h4>
+                        <p>Segunda a sexta-feira</p>
+                        <p>Das 8h às 14h</p>
+                    </div>
+
+                    <div class="atendimento-card">
+                        <h4>Atendimento Presencial</h4>
+                        <p>Câmara Municipal</p>
+                        <p>Cidade Fictícia</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="consulta-protocolo">
+                <h3>Consulte sua Manifestação</h3>
+                <p>
+                    Informe o número do protocolo recebido no momento
+                    do envio da manifestação.
+                </p>
+
+                <form>
+                    <label for="protocolo">Número do protocolo</label>
+                    <input
+                        type="text"
+                        id="protocolo"
+                        name="protocolo"
+                        placeholder="Ex.: 2026-000123"
+                        required
+                    >
+                    <button type="submit">Consultar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
